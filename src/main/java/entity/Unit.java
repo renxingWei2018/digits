@@ -1,15 +1,13 @@
 package entity;
 
-import java.util.Arrays;
-
 /**
- * 按键类
+ * 按键类(单个元素)
  * <p>
  * Created  by  renxingWei  on  2020/9/21
  **/
 public class Unit {
 
-    // 元素的数字代表
+    // 元素的代表数字
     private int number;
 
     // 元素代表的字母(大写)
@@ -29,13 +27,5 @@ public class Unit {
 
     public void setLeters(Character[] leters) {
         this.leters = leters;
-    }
-
-    @Override
-    public String toString() {
-        return "Unit{" +
-                "number=" + number +
-                ", leters=" + Arrays.toString(leters) +
-                '}';
     }
 }

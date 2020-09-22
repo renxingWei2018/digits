@@ -1,14 +1,10 @@
 package entity;
-
-import java.util.Arrays;
-
 /**
  * 键盘模型
  * <p>
  * Created  by  renxingWei  on  2020/9/21
  **/
 public class Model {
-
     // 元素集合，0-9
     private Unit[] units = new Unit[10];
 
@@ -62,20 +58,18 @@ public class Model {
         units[9] = unit9;
     }
 
-    @Override
-    public String toString() {
-        return "Model{" +
-                ", units=" + Arrays.toString(units) +
-                '}';
-    }
-
     // 获取数字代表的字母数组
     public Character[] getCharsByNomber(int nomber){
-        for (Unit unit : units) {
-            if (unit.getNumber()==nomber) {
-                return unit.getLeters();
-            }
+        boolean has = false;
+            Unit unit2 = null;
+            for (Unit unit : units) {
+                if (unit.getNumber()==nomber) {
+                    //unit2= unit.getLeters();
+                    unit2= unit;
+                    has =true;
+                    break;
+                }
         }
-        return null;
+        return has?unit2.getLeters():null;
     }
 }

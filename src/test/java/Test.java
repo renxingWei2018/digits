@@ -1,4 +1,4 @@
-import application.Application;
+import application.App;
 
 /**
  * Junit test class
@@ -14,7 +14,7 @@ public class Test {
     @org.junit.Test
     public void test0_9() {
         Integer[] input = new Integer[]{0, 2, 3};
-        Application application = new Application(input, 9);
+        App application = new App(input, 9);
         application.getResult().printResult();
     }
 
@@ -22,7 +22,7 @@ public class Test {
     @org.junit.Test
     public void testWhith0_99() {
         Integer[] input = new Integer[]{12, 6, 33};
-        Application application = new Application(input, 99);
+        App application = new App(input, 99);
         application.getResult().printResult();
     }
 
@@ -34,7 +34,7 @@ public class Test {
         for (int i = 0; i < num; i++) {
             input[i]=(int) (Math.random() * 12)-1;
         }
-        Application application = new Application(input, 9);
+        App application = new App(input, 9);
         application.getResult().printResult();
     }
 
@@ -46,7 +46,7 @@ public class Test {
         for (int i = 0; i < num; i++) {
             input[i]=(int) (Math.random() * 105)-4;
         }
-        Application application = new Application(input, 99);
+        App application = new App(input, 99);
         application.getResult().printResult();
     }
 

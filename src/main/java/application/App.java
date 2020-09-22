@@ -1,4 +1,4 @@
-﻿package application;
+package application;
 
 import entity.Model;
 import entity.Result;
@@ -7,13 +7,12 @@ import java.util.ArrayList;
 
 import java.util.List;
 
-
 /**
  * 计算类
  * <p>
  * Created  by  renxingWei  on  2020/9/21 0021
  **/
-public class Application {
+public class App{
 
     private Model model = new Model();
 
@@ -23,7 +22,7 @@ public class Application {
 
     private Result result = new Result();
 
-    public Application(Integer[] input, int model) {
+    public App(Integer[] input, int model) {
         this.input = input;
         System.out.print("你的输入数字是：[");
         for (int i=0;i<input.length;i++) {
@@ -45,7 +44,7 @@ public class Application {
             result.setHasError(true);
             return;
         }
-        result.setInput(input);
+        // 递归计算结果
         celculate(1, "");
         if (output.size() < 1) {
             result.setMessage("无法组合，请检查你的输入！");
@@ -79,15 +78,6 @@ public class Application {
             }
         }
     }
-
-    public Model getModel() {
-        return model;
-    }
-
-    public Integer[] getInput() {
-        return input;
-    }
-
     public Result getResult() {
         return result;
     }

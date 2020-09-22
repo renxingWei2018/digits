@@ -18,13 +18,6 @@ public class Result {
     // 计算结果描述
     private String message;
 
-    // 输入数组
-    private Integer[] input;
-
-    public List<String> getLeterResult() {
-        return leterResult;
-    }
-
     public void setHasError(boolean hasError){
         this.hasError = hasError;
     }
@@ -43,24 +36,10 @@ public class Result {
         }
         System.out.println();
     }
-
     public void setLeterResult(List<String> leterResult) {
         this.leterResult = leterResult;
     }
-
-    public String getMessage() {
-        return message;
-    }
-
     public void setMessage(String message) {
         this.message = message;
-    }
-
-    public Integer[] getInput() {
-        return input;
-    }
-
-    public void setInput(Integer[] input) {
-        this.input = input;
     }
 }
